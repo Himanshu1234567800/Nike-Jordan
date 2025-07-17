@@ -1,0 +1,1516 @@
+
+:root {
+  
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --text-primary: #2f2f2f;
+  --text-secondary: #615f5f;
+  --text-muted: #868484;
+  --border-color: #ccc;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --overlay-bg: #c6c5c5;
+}
+
+html[data-theme="dark"] {
+
+  --bg-primary: #111111;
+  --bg-secondary: #1F1F21;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-muted: #999999;
+  --border-color: #444444;
+  --shadow-color: rgba(255, 255, 255, 0.1);
+  --overlay-bg: #2a2a2a;
+}
+html[data-theme="dark"] body {
+  background-color: #1F1F21 !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .nav {
+  background-color: #111111 !important;
+}
+
+html[data-theme="dark"] .nav-part2 {
+  background-color: #1F1F21 !important;
+}
+
+html[data-theme="dark"] .nav3 {
+  background-color: #111111!important;
+}
+
+html[data-theme="dark"] #nav2 h4,
+html[data-theme="dark"] #nav-part2-center h3,
+html[data-theme="dark"] .nav3 h3,
+html[data-theme="dark"] .nav3 h4 {
+  color: #ffffff !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- Navigation --- */
+.nav {
+  height: 2.4vw;
+  background-color: var(--bg-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 101;
+  transition: background-color 0.3s ease;
+}
+.nav img {
+  height: 24px;
+  padding-left: 3.3vw;
+}
+#nav2 {
+  display: flex;
+  align-items: center;
+  gap: 1.5vw;
+  margin-right: 4vw;
+}
+#nav2 ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5vw;
+}
+#nav2 h4 {
+  font-size: 0.8vw;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all ease 0.6s;
+  white-space: nowrap;
+}
+#nav2 h4:hover {
+  color: var(--text-muted);
+  transform: rotate3d(2, 2, 0, 25deg);
+}
+
+.nav-part2 {
+  height: 4vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3.3vw;
+  position: sticky;
+  top: 2.4vw;
+  z-index: 100;
+  background-color: var(--bg-primary);
+  box-shadow: 0 2px 5px var(--shadow-color);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.nav-part2 img {
+  height: 2.5vw;
+}
+#nav-part2-center {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 1.5vw;
+}
+#nav-part2-center ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5vw;
+}
+#nav-part2-center h3 {
+  color: var(--text-primary);
+  font-size: 1.1vw;
+  transition: all ease 0.6s;
+  white-space: nowrap;
+}
+#nav-part2-center h3:hover {
+  color: var(--text-muted);
+  transform: rotate3d(1, 0, 0, 30deg);
+}
+#nav-part2-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5vw;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-left: 0.5vw;
+}
+
+#theme-toggle:hover {
+  background-color: var(--bg-secondary);
+  transform: scale(1.1);
+}
+
+#theme-icon {
+  font-size: 1.2vw;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+/* Search Bar Styling */
+.search-container {
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  background-color: var(--bg-secondary);
+  padding: 0.3vw 0.8vw;
+  transition: all ease 0.3s;
+}
+.search-container:focus-within {
+  background-color: var(--border-color);
+  box-shadow: 0 0 0 2px var(--shadow-color);
+}
+#search-input {
+  border: none;
+  background: transparent;
+  font-size: 1vw;
+  padding: 0.5vw 0;
+  outline: none;
+  color: var(--text-primary);
+  width: 10vw;
+  min-width: 100px;
+}
+#search-input::placeholder {
+  color: var(--text-muted);
+}
+#search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-left: 0.5vw;
+}
+#search-button img {
+  height: 1.2vw;
+  min-height: 15px;
+  transition: transform 0.3s ease;
+}
+#search-button img:hover {
+  transform: scale(1.1);
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.image img {
+  height: 1.7vw;
+  transition: all ease 0.6s;
+}
+
+.image img:hover {
+  transform: rotate3d(1, 1, 1, 30deg);
+}
+
+.nav3 {
+  height: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--bg-secondary);
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.nav3 h3 {
+  font-size: 1.2vw;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.nav3 h4 {
+  margin-top: 0.5vw;
+  font-size: 0.8vw;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.nav3 h3:hover {
+  color: var(--text-muted);
+}
+.nav3 h4:hover {
+  color: var(--text-muted);
+}
+
+/* --- Page 1 */
+.page1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2vw 0;
+}
+.page1 img {
+  height: 5.2vw;
+  margin-top: 4vw;
+  cursor: pointer;
+  transition: all ease 0.6s;
+}
+.page1 img:hover {
+  transform: rotate3d(1, 0, 0, 35deg);
+}
+#page1-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3vw;
+  gap: 2vw;
+  flex-wrap: wrap;
+  padding: 0 2vw;
+}
+#page1-text h3 {
+  color: var(--text-primary);
+  font-size: 1vw;
+  cursor: pointer;
+  transition: all ease 0.6s;
+  white-space: nowrap;
+}
+#page1-text h3:hover {
+  color: var(--text-muted);
+  transform: rotate3d(2, 2, 0, 25deg);
+}
+#page1-img {
+  width: 100%;
+  text-align: center;
+}
+#page1-img img {
+  margin-top: 3vw;
+  height: auto;
+  max-width: 90%;
+  cursor: pointer;
+  transition: all ease 0.6s;
+}
+#page1-img img:hover {
+  transform: rotate3d(1, 0, 0, 30deg);
+}
+#page1-text2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  margin-top: 3vw;
+  text-align: center;
+  padding: 0 5vw;
+}
+#page1-text2 h3 {
+  font-size: 1vw;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+#page1-text2 h1 {
+  font-size: 4vw;
+  font-family: Helvetica;
+  font-weight: 800;
+  letter-spacing: -5.7px;
+  line-height: 1.2;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+#page1-text2 h4 {
+  color: var(--text-secondary);
+  font-size: 1.2vw;
+  transition: color 0.3s ease;
+}
+#page1-text2 p {
+  color: var(--text-secondary);
+  font-size: 1.2vw;
+  transition: color 0.3s ease;
+}
+#page1-text2 h3:hover {
+  color: #868484;
+}
+#page1-text2 h1:hover {
+  color: #484747;
+}
+#page1-text2 h4:hover {
+  color: #201f1f;
+}
+#page1-text2 p:hover {
+  color: #201f1f;
+}
+#page1-text2 h2 {
+  font-size: 1.2vw;
+  padding: 0.5vw 1.2vw;
+  border-radius: 28px;
+  margin-top: 1.5vw;
+  cursor: pointer;
+  transition: all ease 0.6s;
+  background-color: #000;
+  color: #fff;
+  white-space: nowrap;
+}
+#page1-text2 h2:hover {
+  color: rgb(235, 231, 222);
+  transform: rotate3d(1, 0, 0, 25deg);
+}
+
+/* Product Sections (Pages 2, 3, 4, 5) */
+.page2,
+.page3,
+.page4,
+.page5 {
+  height: auto;
+  width: 100%;
+  margin-top: 2vw;
+  padding-bottom: 3vw;
+}
+#page2-text,
+#page3-text,
+#page4-text,
+#page5-text {
+  padding: 1vw 4vw;
+}
+#page2-text h2,
+#page3-text h2,
+#page4-text h2,
+#page5-text h2 {
+  font-size: 1.8vw;
+  font-weight: 800;
+}
+
+.product-carousel {
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  touch-action: pan-x;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.swiper-wrapper {
+  display: flex;
+  margin-left: 2vw;
+  cursor: grab;
+  touch-action: pan-x;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.swiper-wrapper:active {
+  cursor: grabbing;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin: 0;
+  height: auto;
+  padding-bottom: 10px;
+  touch-action: pan-x;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.card,
+.card2 {
+  height: 400px;
+  width: 100%;
+  max-width: 380px;
+  min-width: 280px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: all ease 0.6s;
+  cursor: pointer;
+  margin: 0;
+  border-radius: 10px;
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+.card1,
+.card3 {
+  height: 600px;
+  width: 100%;
+  max-width: 550px;
+  min-width: 300px;
+  margin: 0;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: all ease 0.6s;
+  cursor: pointer;
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000 !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 30px !important;
+}
+
+#page5-card1 {
+  background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/w_706,c_limit/290a8c3b-de25-48f6-9d12-4e60e287df35/jordan.png);
+}
+#page5-card2 {
+  background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/w_706,c_limit/3dcd862e-9bb4-466a-af53-897001cf82dd/jordan.jpg);
+}
+#CARD1 {
+  background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/2b5d6d60-9b6c-4240-ac60-93957aa882d8/WMNS+JORDAN+TRUNNER+LX+RA.png);
+}
+#CARD2 {
+  background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/56bddcfb-8b43-4549-8025-e26ee66dd71c/WMNS+AIR+JORDAN+1+MM+LOW+V3.png);
+}
+#CARD3 {
+  background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/687794b7-56b5-46d2-ae3c-d41dc2428cd2/WMNS+AIR+JORDAN+1+MM+LOW+V3.png);
+}
+#CARD4 {
+  background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/8f19d382-7932-4c1b-abf3-30d6c489b297/WMNS+JORDAN+CMFT+ERA.png);
+}
+#CARD5 {
+  background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/009119cc-39ec-4456-a4cf-c0fd1f7b7ca3/WMNS+AIR+JORDAN+1+LOW.png);
+}
+#CARD6 {
+  background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/66c6e9a0-6a0f-4d1a-92c2-3e9b4fcfd19c/WMNS+AIR+JORDAN+4+RM.png);
+}
+
+#Card1 {
+  background-image: url(https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_464,c_limit/85d1d12f-b0a5-49c0-bc81-6238cfc5d9ac/jordan-1-retro-high-og-younger-shoes-KnJFC8.png);
+}
+
+#Card2 {
+  background-image: url(https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_464,c_limit/b78db1a9-a8e2-4c29-82e1-2f7fc7a759ba/air-jordan-3-retro-starfish-shoes-YZg0F0jV.png);
+}
+#Card3 {
+  background-image: url(https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_464,c_limit/a8617d24-3080-450d-ab4f-5c043aca7469/air-jordan-40-pf-classic-basketball-shoes-jJIHTmH6.png);
+}
+#Card4 {
+  background-image: url(https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_464,c_limit/b249d6f6-6836-4437-8f9e-1bd459fa36f8/air-jordan-1-low-easyon-shoes-SsT4HK.png);
+}
+
+#card1 {
+  background-image: url(https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_464,c_limit/81d10257-65bc-45c1-8970-5449316928c6/air-jordan-1-retro-high-og-shoes-Pz6fZ9.png);
+}
+#card2 {
+  background-image: url(https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_464,c_limit/ec03f683-8ee8-42c1-b689-3c825904086f/air-jordan-1-high-og-older-shoes-2xBRSk.png);
+}
+#card3 {
+  background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/21d7e5cd-c075-4dcd-b8b3-e0496f520be6/JORDAN+LUKA+4+PF.png);
+}
+#card4 {
+  background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/6e61b19a-e8ca-45b3-912c-51ecdb745485/JORDAN+LUKA+.77+PF.png);
+}
+#card5 {
+  background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/2cb781d0-946f-4c47-b679-c94a29ab1ee8/JORDAN+B%27LOYAL.png);
+}
+#card6 {
+  background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a4b97d0e-0065-4818-90f2-b0778ac48c6b/AIR+JORDAN+4+RETRO.png);
+}
+#card7 {
+  background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b3d033b9-a163-4148-86e6-360401235b6b/JORDAN+STAY+LOYAL.png);
+}
+#card8 {
+  background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1196ebaa-3470-4038-8170-250f21f807ec/JORDAN+MAX+AURA+7.png);
+}
+
+#CARD-1 {
+  background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/7ec3c3e1-51f8-4b54-8f61-656fd72e3f3c/NK+HERITAGE+EUGENE+WNTRZD+BKPK.png);
+}
+#CARD-2 {
+  background-image: url(https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/79b62da6-500f-4f6f-af62-fa82e746110b/NK+UTILITY+GMSK+-+2.0.png);
+}
+#CARD-3 {
+  background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0f0a7877-7aef-447f-86c2-1ef62d7c1c93/U+NK+DF+CLUB+CAP+U+CB+MTSWSH+L.png);
+}
+#CARD-4 {
+  background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b6nzxw9bb3tvwllpbpk7/U+NK+EVERYDAY+LTWT+CREW+3PR.png);
+}
+#CARD-5 {
+  background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c39f50da-54c0-4701-9f76-038aecf61605/AS+M+NK+TCH+FLC+FZ+WR+HOODIE.png);
+}
+#CARD-6 {
+  background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6da8f4a5-487e-48e1-8162-3fc9d8621290/WNBA+M+NK+PO+FLC+ESSNTL+W13.png);
+}
+
+.overlay,
+.overlay2 {
+  height: 100%;
+  width: 100%;
+  background-color: #c6c5c5;
+  padding: 30px;
+  padding-top: 120px;
+  transition: all ease 0.6s;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.overlay h3,
+.overlay2 h3 {
+  color: #000;
+  font-size: 3vw;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+.overlay p,
+.overlay2 p {
+  color: #717171;
+  font-size: 1.2vw;
+}
+.overlay2 h4 {
+  color: #000;
+  font-size: 1.2vw;
+  margin-top: 10px;
+}
+.card:hover .overlay,
+.card2:hover .overlay2 {
+  opacity: 1;
+}
+.card:hover,
+.card2:hover {
+  transform: rotate3d(1, 0, 0, 20deg);
+}
+
+.overlay1 {
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  padding-top: 120px;
+  transition: all ease 0.6s;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.overlay1 h3 {
+  color: #fff;
+  font-size: 2.5vw;
+  font-weight: 800;
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+.overlay1 p {
+  color: #fff;
+  font-size: 1.2vw;
+}
+.card1:hover {
+  transform: rotate3d(1, 0, 0, 20deg);
+}
+
+.overlay3 {
+  margin-left: 1.5vw;
+  height: 100%;
+  padding: 30px;
+  padding-top: 120px;
+  transition: all ease 0.6s;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.overlay3 h3 {
+  color: #000;
+  font-size: 20px;
+  margin-top: 10vw;
+}
+.overlay3 p {
+  margin-top: 0.5vw;
+  color: #000;
+  font-size: 1.2vw;
+}
+#overlay3-p p {
+  margin-top: 1vw;
+  color: #000;
+}
+.overlay3 h4 {
+  margin-top: 1vw;
+  color: #fff;
+}
+#overlay3-hov,
+#overlay3-hov1 {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+}
+#overlay3-hov h4,
+#overlay3-hov1 h4 {
+  font-size: 1vw;
+  padding: 0.7vw 1vw;
+  border-radius: 15px;
+  transition: all ease 0.6s;
+  cursor: pointer;
+  white-space: nowrap;
+}
+#overlay3-hov h4 {
+  background-color: #000;
+  color: #fff;
+  border-radius: 15px;
+}
+#overlay3-hov1 h4 {
+  background-color: #fff;
+  color: #000;
+  border-radius: 20px;
+}
+#overlay3-hov1 h4:hover,
+#overlay3-hov h4:hover {
+  background-color: #717171;
+  color: #fff;
+}
+.card3:hover .overlay3 {
+  opacity: 1;
+  transform: rotate3d(1, 0, 0, 20deg);
+}
+.card3:hover {
+  transform: rotate3d(1, 0, 0, 20deg);
+}
+
+.newsletter-section {
+  background-color: #f5f5f5;
+  padding: 4vw;
+  text-align: center;
+  margin-top: 4vw;
+}
+.newsletter-section h2 {
+  font-size: 2.5vw;
+  margin-bottom: 1vw;
+  color: #2f2f2f;
+}
+.newsletter-section p {
+  font-size: 1.2vw;
+  color: #615f5f;
+  margin-bottom: 2vw;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  flex-wrap: wrap;
+}
+#newsletter-email {
+  padding: 1vw 1.5vw;
+  border: 1px solid #ccc;
+  border-radius: 28px;
+  font-size: 1.1vw;
+  width: 30vw;
+  max-width: 400px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+#newsletter-email:focus {
+  border-color: #000;
+}
+#newsletter-form button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 1vw 2vw;
+  border-radius: 28px;
+  font-size: 1.1vw;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+}
+#newsletter-form button:hover {
+  background-color: #444;
+  transform: translateY(-2px);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-align: center;
+}
+
+.close-button {
+  color: #aaa;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  font-size: 2.2vw;
+  margin-bottom: 25px;
+  color: #2f2f2f;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1vw;
+  color: #555;
+  font-weight: bold;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1.1vw;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+  border-color: #000;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content button[type="submit"] {
+  background-color: #000;
+  color: white;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.2vw;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.modal-content button[type="submit"]:hover {
+  background-color: #444;
+  transform: translateY(-2px);
+}
+
+.form-switch {
+  margin-top: 20px;
+  font-size: 0.9vw;
+  color: #666;
+}
+
+.form-switch a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.form-switch a:hover {
+  color: #555;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+  .modal-content h2 {
+    font-size: 3vw;
+  }
+  .form-group label {
+    font-size: 1.5vw;
+  }
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    font-size: 1.6vw;
+    padding: 10px 12px;
+  }
+  .modal-content button[type="submit"] {
+    font-size: 1.8vw;
+    padding: 12px 20px;
+  }
+  .form-switch {
+    font-size: 1.2vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal-content {
+    padding: 25px;
+    width: 95%;
+    max-width: 350px;
+  }
+  .modal-content h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .form-group label {
+    font-size: 14px;
+  }
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    font-size: 15px;
+    padding: 10px;
+  }
+  .modal-content button[type="submit"] {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+  .form-switch {
+    font-size: 12px;
+  }
+  .close-button {
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content {
+    padding: 20px;
+  }
+  .modal-content h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .form-group label {
+    font-size: 12px;
+  }
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .modal-content button[type="submit"] {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+  .form-switch {
+    font-size: 11px;
+  }
+  .close-button {
+    top: 8px;
+    right: 15px;
+    font-size: 22px;
+  }
+}
+
+/* --- Footer --- */
+.footer {
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2vw;
+  transition: all ease 0.6s;
+  gap: 3vw;
+  padding: 4vw;
+  text-align: left;
+}
+.footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer:hover {
+  transform: none;
+}
+.footer > div {
+  flex: 1 1 200px;
+  margin-bottom: 2vw;
+}
+.footer ul {
+  list-style: none;
+}
+#footer1 h3,
+#footer2 h3,
+#footer3 h3,
+#footer4 h3 {
+  margin-bottom: 1vw;
+  font-size: 1.2vw;
+  font-weight: 800;
+  color: #111111;
+}
+#footer1 h5,
+#footer2 h5,
+#footer3 h5,
+#footer4 h5 {
+  color: #888888;
+  cursor: pointer;
+  font-size: 0.9vw;
+  transition: all ease 0.6s;
+  line-height: 1.8;
+}
+#footer1 h5:hover,
+#footer2 h5:hover,
+#footer3 h5:hover,
+#footer4 h5:hover {
+  color: #111111;
+  transform: rotate3d(1, 1, 0, 20deg);
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  display: none;
+  transition: opacity 0.4s ease;
+}
+#scrollToTopBtn:hover {
+  background-color: #444;
+}
+
+@media screen and (max-width: 1024px) {
+  #nav2 h4 {
+    font-size: 1.2vw;
+  }
+  #nav-part2-center h3 {
+    font-size: 1.6vw;
+  }
+  #nav-part2-left h3 {
+    font-size: 1.5vw;
+    padding: 1vw 1.5vw;
+  }
+  .nav3 h3 {
+    font-size: 1.8vw;
+  }
+  .nav3 h4 {
+    font-size: 1.2vw;
+  }
+  #page1-text h3 {
+    font-size: 1.5vw;
+  }
+  #page1-text2 h3 {
+    font-size: 1.5vw;
+  }
+  #page1-text2 h1 {
+    font-size: 5vw;
+    letter-spacing: -3px;
+  }
+  #page1-text2 h4,
+  #page1-text2 p {
+    font-size: 1.5vw;
+  }
+  #page1-text2 h2 {
+    font-size: 1.8vw;
+    padding: 0.8vw 1.8vw;
+  }
+  #page2-text h2,
+  #page3-text h2,
+  #page4-text h2,
+  #page5-text h2 {
+    font-size: 2.5vw;
+  }
+  .overlay h3,
+  .overlay2 h3 {
+    font-size: 4vw;
+  }
+  .overlay p,
+  .overlay2 p {
+    font-size: 1.5vw;
+  }
+  .overlay2 h4 {
+    font-size: 1.5vw;
+  }
+  .overlay1 h3 {
+    font-size: 3.5vw;
+  }
+  .overlay1 p {
+    font-size: 1.5vw;
+  }
+  .overlay3 h3 {
+    font-size: 2.5vw;
+  }
+  .overlay3 p {
+    font-size: 1.5vw;
+  }
+  #overlay3-hov h4,
+  #overlay3-hov1 h4 {
+    font-size: 1.5vw;
+    padding: 1vw 1.8vw;
+  }
+  .footer h3 {
+    font-size: 1.8vw;
+  }
+  .footer h5 {
+    font-size: 1.2vw;
+  }
+
+  .nav img {
+    height: 30px;
+  }
+  .nav-part2 img {
+    height: 3.5vw;
+  }
+  .nav-part2 {
+    top: 30px;
+  }
+  .search-container {
+    padding: 0.5vw 1vw;
+  }
+  #search-input {
+    font-size: 1.2vw;
+    width: 12vw;
+  }
+  #search-button img {
+    height: 1.5vw;
+  }
+
+  .card,
+  .card2 {
+    height: 350px;
+    max-width: 45%;
+  }
+  .card1,
+  .card3 {
+    height: 550px;
+    max-width: 48%;
+  }
+
+  .newsletter-section h2 {
+    font-size: 3vw;
+  }
+  .newsletter-section p {
+    font-size: 1.5vw;
+  }
+  #newsletter-email {
+    font-size: 1.4vw;
+    padding: 1.2vw 1.8vw;
+    width: 40vw;
+  }
+  #newsletter-form button {
+    font-size: 1.4vw;
+    padding: 1.2vw 2.5vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    height: 30px;
+  }
+  .nav img {
+    height: 20px;
+    padding-left: 20px;
+  }
+  #nav2 {
+    gap: 10px;
+    margin-right: 20px;
+  }
+  #nav2 h4 {
+    font-size: 10px;
+  }
+  .nav-part2 {
+    height: 60px;
+    padding: 0 20px;
+  }
+  .nav-part2 img {
+    height: 40px;
+  }
+  #nav-part2-center {
+    display: none;
+  }
+  #nav-part2-left {
+    gap: 10px;
+    margin-right: 0;
+  }
+  .nav-part2 {
+    top: 30px;
+  }
+  .search-container {
+    padding: 5px 10px;
+  }
+  #search-input {
+    font-size: 12px;
+    width: 150px;
+  }
+  #search-button img {
+    height: 15px;
+  }
+  .image img {
+    height: 30px;
+  }
+  .nav3 {
+    height: auto;
+    padding: 10px 0;
+  }
+  .nav3 h3 {
+    font-size: 16px;
+    padding-right: 0;
+  }
+  .nav3 h4 {
+    font-size: 12px;
+    padding-right: 0;
+    margin-top: 5px;
+  }
+  .page1 img {
+    height: 40px;
+    margin-top: 30px;
+    padding-right: 0;
+  }
+  #page1-text {
+    margin-top: 20px;
+    gap: 15px;
+    padding: 0 10px;
+  }
+  #page1-text h3 {
+    font-size: 14px;
+  }
+  #page1-img img {
+    max-width: 95%;
+    margin-top: 20px;
+  }
+  #page1-text2 {
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+  #page1-text2 h3 {
+    font-size: 14px;
+  }
+  #page1-text2 h1 {
+    font-size: 35px;
+    letter-spacing: -2px;
+  }
+  #page1-text2 h4,
+  #page1-text2 p {
+    font-size: 14px;
+  }
+  #page1-text2 h2 {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 20px;
+  }
+
+  /* Product Cards */
+  #page2-text,
+  #page3-text,
+  #page4-text,
+  #page5-text {
+    padding: 20px 20px;
+  }
+  #page2-text h2,
+  #page3-text h2,
+  #page4-text h2,
+  #page5-text h2 {
+    font-size: 20px;
+  }
+  .product-carousel {
+    padding: 0 20px;
+  }
+  .swiper-slide {
+    width: 100% !important;
+    margin-right: 0 !important;
+    padding-bottom: 20px;
+  }
+  .card,
+  .card2,
+  .card1,
+  .card3 {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    min-height: 300px;
+    margin: 0 auto;
+  }
+
+  .overlay h3,
+  .overlay2 h3 {
+    font-size: 28px;
+  }
+  .overlay p,
+  .overlay2 p {
+    font-size: 14px;
+  }
+  .overlay2 h4 {
+    font-size: 14px;
+  }
+  .overlay1 h3 {
+    font-size: 25px;
+    margin-top: auto;
+  }
+  .overlay1 p {
+    font-size: 14px;
+  }
+  .overlay3 h3 {
+    font-size: 20px;
+    margin-top: auto;
+  }
+  .overlay3 p {
+    font-size: 14px;
+  }
+  #overlay3-hov h4,
+  #overlay3-hov1 h4 {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .newsletter-section h2 {
+    font-size: 25px;
+  }
+  .newsletter-section p {
+    font-size: 14px;
+  }
+  #newsletter-form {
+    flex-direction: column;
+    gap: 15px;
+  }
+  #newsletter-email {
+    font-size: 14px;
+    padding: 10px 15px;
+    width: 90%;
+    max-width: 300px;
+  }
+  #newsletter-form button {
+    font-size: 14px;
+    padding: 10px 20px;
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .footer {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  .footer > div {
+    flex: 1 1 100%;
+    margin-bottom: 0;
+  }
+  .footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .footer h5 {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav {
+    height: 25px;
+  }
+  .nav img {
+    height: 18px;
+    padding-left: 15px;
+  }
+  #nav2 h4 {
+    font-size: 9px;
+  }
+
+  .nav-part2 {
+    height: 50px;
+    padding: 0 15px;
+  }
+  .nav-part2 img {
+    height: 30px;
+  }
+  .nav-part2 {
+    top: 25px;
+  }
+
+  .search-container {
+    padding: 4px 8px;
+  }
+  #search-input {
+    font-size: 10px;
+    width: 100px;
+  }
+  #search-button img {
+    height: 12px;
+  }
+
+  .image img {
+    height: 25px;
+  }
+
+  .nav3 h3 {
+    font-size: 14px;
+  }
+  .nav3 h4 {
+    font-size: 10px;
+  }
+
+  .page1 img {
+    height: 35px;
+    margin-top: 20px;
+  }
+  #page1-text {
+    margin-top: 15px;
+    gap: 10px;
+    padding: 0 5px;
+  }
+  #page1-text h3 {
+    font-size: 12px;
+  }
+  #page1-img img {
+    max-width: 100%;
+    margin-top: 15px;
+  }
+  #page1-text2 h3 {
+    font-size: 12px;
+  }
+  #page1-text2 h1 {
+    font-size: 28px;
+    letter-spacing: -1px;
+  }
+  #page1-text2 h4,
+  #page1-text2 p {
+    font-size: 12px;
+  }
+  #page1-text2 h2 {
+    font-size: 14px;
+    padding: 8px 15px;
+    margin-top: 15px;
+  }
+
+  #page2-text h2,
+  #page3-text h2,
+  #page4-text h2,
+  #page5-text h2 {
+    font-size: 18px;
+  }
+  .product-carousel {
+    padding: 0 15px;
+  }
+  .card,
+  .card2,
+  .card1,
+  .card3 {
+    min-height: 250px;
+  }
+  .overlay h3,
+  .overlay2 h3 {
+    font-size: 24px;
+    padding-top: 80px;
+  }
+  .overlay p,
+  .overlay2 p {
+    font-size: 12px;
+  }
+  .overlay2 h4 {
+    font-size: 12px;
+  }
+  .overlay1 h3 {
+    font-size: 20px;
+  }
+  .overlay1 p {
+    font-size: 12px;
+  }
+  .overlay3 h3 {
+    font-size: 18px;
+  }
+  .overlay3 p {
+    font-size: 12px;
+  }
+  #overlay3-hov h4,
+  #overlay3-hov1 h4 {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  .newsletter-section h2 {
+    font-size: 20px;
+  }
+  .newsletter-section p {
+    font-size: 12px;
+  }
+  #newsletter-email {
+    font-size: 12px;
+    padding: 8px 12px;
+    width: 100%;
+    max-width: 250px;
+  }
+  #newsletter-form button {
+    font-size: 12px;
+    padding: 8px 15px;
+    width: 100%;
+    max-width: 250px;
+  }
+  .footer {
+    padding: 20px 15px;
+  }
+  .footer h3 {
+    font-size: 16px;
+  }
+  .footer h5 {
+    font-size: 12px;
+  }
+  #scrollToTopBtn {
+    bottom: 15px;
+    right: 15px;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}

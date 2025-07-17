@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIKE Jordan</title>
+    <meta name="description"
+        content="Explore the latest Nike Jordan shoes, clothing, and gear. Find new releases, classic styles, and more from the iconic Jordan brand.">
+
+    <link rel="icon" href="./images/Logo_NIKE.svg">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="nav">
+        <img src="./images/Jumpman_logo.svg.png" alt="Jumpman logo">
+        <div id="nav2">
+            <ul>
+                <li>
+                    <h4><a href="https://www.nike.com/in/retail" target="_blank"
+                            style="text-decoration: none; color: inherit;">Find a store</a></h4>
+                </li>
+                <li>
+                    <h4><a href="https://www.nike.com/in/help" target="_blank"
+                            style="text-decoration: none; color: inherit;">Help</a></h4>
+                </li>
+                <li>
+                    <h4 id="joinUsBtn">Join Us</h4>
+                </li>
+                <li>
+                    <h4 id="signInBtn">Sign In</h4>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="nav-part2">
+        <img src="./images/Logo_NIKE.svg" alt="Nike logo">
+        <div id="nav-part2-center">
+            <ul>
+                <li>
+                    <h3><a href="https://www.nike.com/in/w/new-3n82y" target="_blank"
+                            style="text-decoration: none; color: inherit;">New & Featured</a></h3>
+                </li>
+                <li>
+                    <h3><a href="https://www.nike.com/in/men" target="_blank"
+                            style="text-decoration: none; color: inherit;">Men</a></h3>
+                </li>
+                <li>
+                    <h3><a href="https://www.nike.com/in/women" target="_blank"
+                            style="text-decoration: none; color: inherit;">Women</a></h3>
+                </li>
+                <li>
+                    <h3><a href="https://www.nike.com/in/kids" target="_blank"
+                            style="text-decoration: none; color: inherit;">Kids</a></h3>
+                </li>
+                <li>
+                    <h3><a href="https://www.nike.com/in/w/sale-3yaep" target="_blank"
+                            style="text-decoration: none; color: inherit;">Sale</a></h3>
+                </li>
+                <li>
+                    <h3><a href="https://www.nike.com/in/launch" target="_blank"
+                            style="text-decoration: none; color: inherit;">SNKRS</a></h3>
+                </li>
+            </ul>
+        </div>
+
+        <div id="nav-part2-left">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search Jordan...">
+                <button id="search-button" aria-label="Search">
+                    <i class="ri-search-line"></i>
+                </button>
+            </div>
+            <button id="theme-toggle" aria-label="Toggle dark mode">
+                <i class="ri-moon-line" id="theme-icon"></i>
+            </button>
+        </div>
+<script>
+  const toggleBtn = document.getElementById("theme-toggle");
+  const icon = document.getElementById("theme-icon");
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    document.documentElement.setAttribute("data-theme", savedTheme);
+    icon.className = savedTheme === "dark" ? "ri-sun-line" : "ri-moon-line";
+  }
+  toggleBtn.addEventListener("click", () => {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    const isDark = currentTheme === "dark";
+    const newTheme = isDark ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", newTheme);
+    icon.className = isDark ? "ri-moon-line" : "ri-sun-line";
+    localStorage.setItem("theme", newTheme);
+  });
+</script>
+
+    </div>
+    <div class="nav3">
+        <h3><a href="https://www.nike.com/in/w/new-3n82y" target="_blank"
+                style="text-decoration: none; color: inherit;">New Styles On Sale: Up To 40% Off</a></h3>
+        <h4>Shop All Our New Markdowns</h4>
+    </div>
+
+    <div class="page1">
+        <img src="./images/Jumpman_logo.svg.png" alt="Large Jumpman logo">
+        <div id="page1-text">
+            <h3><a href="https://www.nike.com/in/t/air-jordan-4-retro-shoes-WhKfdv/DH6927-161" target="_blank"
+                    style="text-decoration: none; color: inherit;">Air Jordan IV Retro</a></h3>
+            <h3><a href="https://www.nike.com/in/w?q=air%20jordan%201" target="_blank"
+                    style="text-decoration: none; color: inherit;">Air Jordan 1</a></h3>
+            <h3><a href="https://www.nike.com/in/w?q=jordan%20j%20balvin" target="_blank"
+                    style="text-decoration: none; color: inherit;">Jordan x J Balvin</a></h3>
+            <h3><a href="https://www.nike.com/in/w?q=jordan%20travis%20scott" target="_blank"
+                    style="text-decoration: none; color: inherit;">Jordan x Travis Scott</a></h3>
+            <h3><a href="https://www.nike.com/in/w?q=jordan%20max%20aura" target="_blank"
+                    style="text-decoration: none; color: inherit;">Jordan Max Aura</a></h3>
+            <h3><a href="https://www.nike.com/in/w?q=jordan%20stay%20loyal" target="_blank"
+                    style="text-decoration: none; color: inherit;">Jordan Stay Loyal</a></h3>
+        </div>
+
+        <div id="page1-img">
+            <img src="./images/main.avif" alt="">
+        </div>
+        <div id="page1-text2">
+            <h3>JUMPMAN</h3>
+            <h1>YOUR LEGACY STARTS NOW</h1>
+            <h4>Unleash your inner legend. Shop the latest Jordan collection.</h4>
+            <p>Jordan is always looking for new ways to get better, so that you can reach your full potential. Discover
+                the latest innovations and collaborations.</p>
+            <h2 id="shop-button">Shop Now</h2>
+        </div>
+    </div>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Login to your Account</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+                <p class="form-switch">Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('signupModal')">&times;</span>
+            <h2>Create a New Account</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <button type="submit">Sign Up</button>
+                <p class="form-switch">Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
+<div class="page2">
+  <div id="page2-text">
+    <h2>Latest & Trending <i class="ri-time-line"></i></h2>
+  </div>
+  <div class="swiper product-carousel" id="latest-trending-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" data-title="Air Jordan 1 Retro High OG Men's Shoes">
+        <div class="card" id="card1">
+          <div class="overlay">
+            <h3>Air Jordan 1 Retro High OG</h3>
+            <p>Men's Shoes</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-title="Air Jordan 1 High OG Older Kids Shoes">
+        <div class="card" id="card2">
+          <div class="overlay">
+            <h3>Air Jordan 1 High OG</h3>
+            <p>Older Kids' Shoes</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-title="Jordan 1 Retro High OG Younger Kids Shoes">
+        <div class="card" id="Card1">
+          <div class="overlay">
+            <h3>Jordan 1 Retro High OG</h3>
+            <p>Younger Kids' Shoes</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-title="Air Jordan 3 Retro Starfish Women's Shoes">
+        <div class="card" id="Card2">
+          <div class="overlay">
+            <h3>Air Jordan 3 Retro 'Starfish'</h3>
+            <p>Women's Shoes</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-title="Air Jordan 40 PF The Classic Basketball Shoes">
+        <div class="card" id="Card3">
+          <div class="overlay">
+            <h3>Air Jordan 40 PF 'The Classic'</h3>
+            <p>Basketball Shoes</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-title="Air Jordan 1 Low EasyOn Men's Shoes">
+        <div class="card" id="Card4">
+          <div class="overlay">
+            <h3>Air Jordan 1 Low EasyOn</h3>
+            <p>Men's Shoes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+<div class="page3">
+  <div id="page3-text">
+    <h2>Shop by Men's <i class="ri-shopping-cart-line"></i></h2>
+  </div>
+  <div class="swiper product-carousel" id="mens-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" data-title="Luka 4 PF Navidor Basketball Shoes Men's">
+        <div class="card1" id="card3">
+          <div class="overlay1">
+            <h3>Luka 4 PF 'Navidor'</h3>
+            <p>Basketball Shoes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-title="Luka .77 PF Navidor Basketball Shoes Men's">
+        <div class="card1" id="card4">
+          <div class="overlay1">
+            <h3>Luka .77 PF 'Navidor'</h3>
+            <p>Basketball Shoes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-title="Jordan B'Loyal Men's Shoes">
+        <div class="card1" id="card5">
+          <div class="overlay1">
+            <h3>Jordan B'Loyal</h3>
+            <p>Men's Shoes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-title="Air Jordan 4 Retro White Cement Men's Shoes">
+        <div class="card1" id="card6">
+          <div class="overlay1">
+            <h3>Air Jordan 4 Retro 'White Cement'</h3>
+            <p>Men's Shoes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-title="Jordan Stay Loyal Shoes Men's">
+        <div class="card1" id="card7">
+          <div class="overlay1">
+            <h3>Jordan Stay Loyal</h3>
+            <p>Shoes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-title="Jordan Max Aura 7 Men's Shoes">
+        <div class="card1" id="card8">
+          <div class="overlay1">
+            <h3>Jordan Max Aura 7</h3>
+            <p>Men's Shoes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+<div class="page4">
+  <div id="page4-text">
+    <h2>Shop by Women's <i class="ri-shopping-cart-line"></i></h2>
+  </div>
+  <div class="swiper product-carousel" id="womens-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" data-title="Jordan Trunner LX Women's Shoes">
+        <div class="card2" id="CARD1">
+          <div class="overlay2">
+            <h3>Jordan Trunner LX</h3>
+            <p>Women's Shoes</p>
+            <h4>₹ 11 895.00</h4>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-title="Air Jordan 1 Low Method of Make Women's Shoes">
+        <div class="card2" id="CARD2">
+          <div class="overlay2">
+            <h3>Air Jordan 1 Low Method of Make</h3>
+            <p>Women's Shoes</p>
+            <h4>₹ 12 295.00</h4>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-title="Air Jordan 1 Low Method of Make Alt Color Women's Shoes">
+        <div class="card2" id="CARD3">
+          <div class="overlay2">
+            <h3>Air Jordan 1 Low Method of Make</h3>
+            <p>Women's Shoes</p>
+            <h4>₹ 12 295.00</h4>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-title="Jordan CMFT Era Women's Shoes">
+        <div class="card2" id="CARD4">
+          <div class="overlay2">
+            <h3>Jordan CMFT Era</h3>
+            <p>Women's Shoes</p>
+            <h4>₹ 10 795.00</h4>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-title="Air Jordan 1 Low Women's Shoes">
+        <div class="card2" id="CARD5">
+          <div class="overlay2">
+            <h3>Air Jordan 1 Low</h3>
+            <p>Women's Shoes</p>
+            <h4> ₹ 10 795.00</h4>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-title="Air Jordan 4 RM Women's Shoes">
+        <div class="card2" id="CARD6">
+          <div class="overlay2">
+            <h3>Air Jordan 4 RM</h3>
+            <p>Women's Shoes</p>
+            <h4>₹ 12 295.00</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+<div class="page5">
+  <div id="page5-text">
+    <h2>Jordan Gear & Accessories <i class="ri-handbag-line"></i></h2>
+  </div>
+  <div class="swiper product-carousel" id="gear-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" data-title="Nike Heritage Eugene Backpack Bag Accessory">
+        <div class="card3" id="CARD-1">
+          <div class="overlay3">
+            <h3>Nike Heritage</h3>
+            <p>Winterized Eugene Backpack (23L).</p>
+            <div id="overlay3-hov">
+              <h4>Shop Backpacks</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-title="Nike Utility 2.0 Gymsack Bag Accessory">
+        <div class="card3" id="CARD-2">
+          <div class="overlay3">
+            <h3>Nike Utility 2.0</h3>
+            <p>Gymsack (17L).</p>
+            <div id="overlay3-hov1">
+              <h4>Shop Backpacks</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-title="Nike Dri-FIT Club Cap Accessory">
+        <div class="card3" id="CARD-3">
+          <div class="overlay3">
+            <h3>Nike Dri-FIT Club</h3>
+            <p>Unstructured Metal Swoosh Cap</p>
+            <div id="overlay3-hov">
+              <h4>Shop Cap</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-title="Nike Everyday Lightweight Socks Accessory">
+        <div class="card3" id="CARD-4">
+          <div class="overlay3">
+            <h3>Nike Everyday Lightweight</h3>
+            <p>Training Crew Socks (3 Pairs)</p>
+            <div id="overlay3-hov1">
+              <h4>Shop Socks</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-title="Nike Tech Windrunner Hoodie Men's Clothing">
+        <div class="card3" id="CARD-5">
+          <div class="overlay3">
+            <h3>Nike Tech</h3>
+            <p>Men's Full-Zip Windrunner Hoodie</p>
+            <div id="overlay3-hov">
+              <h4>Shop Hoodies</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-title="WNBA Nike Fleece Pullover Hoodie Women's Clothing">
+        <div class="card3" id="CARD-6">
+          <div class="overlay3">
+            <h3>WNBA</h3>
+            <p>Nike Fleece Pullover Hoodie</p>
+            <div id="overlay3-hov1">
+              <h4>Shop Hoodies</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+<p id="noResultsMessage" style="display: none; text-align: center; font-size: 1.2rem; margin-top: 2vw; color: #666;">
+  No matching products found.
+</p>
+
+<div id="page1-img">
+    <img src="./images/main2.avif" alt="">
+</div>
+
+<section class="newsletter-section">
+    <h2> Stay Updated with Jordan</h2>
+    <p>Sign up for our newsletter to get the latest news on releases, events, and more.</p>
+    <form id="newsletter-form">
+        <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
+        <button type="submit">
+            <i class="ri-mail-lock-line"></i>
+            Subscribe
+        </button>
+    </form>
+</section>
+
+<div class="footer">
+    <div id="footer1">
+        <h3>Jordan Shoes</h3>
+        <ul>
+            <li><a href="https://www.nike.com/in/w?q=jordan%20shoes" target="_blank">
+                    <h5>All Jordan Shoes</h5>
+                </a></li>
+            <li><a href="https://www.nike.com/in/w/new-jordan-shoes" target="_blank">
+                    <h5>New Jordan Shoes</h5>
+                </a></li>
+            <li><a href="https://www.nike.com/in/w/lifestyle-jordan-shoes-3n82yzy7ok" target="_blank">
+                    <h5>Jordan Lifestyle</h5>
+                </a></li>
+            <li><a href="https://www.nike.com/in/w/basketball-jordan-shoes-3n82yznik1" target="_blank">
+                    <h5>Jordan Basketball</h5>
+                </a></li>
+            <li><a href="https://www.nike.com/in/w/mens-jordan-shoes-37eefznik1" target="_blank">
+                    <h5>Men's Jordan Shoes</h5>
+                </a></li>
+            <li><a href="https://www.nike.com/in/w/womens-jordan-shoes-5e1x6znik1" target="_blank">
+                    <h5>Women's Jordan Shoes</h5>
+                </a></li>
+            <li><a href="https://www.nike.com/in/w/kids-jordan-shoes-1onrznik1" target="_blank">
+                    <h5>Kids' Jordan Shoes</h5>
+                </a></li>
+        </ul>
+    </div>
+
+    <div id="footer2">
+        <h3>Jordan Clothing</h3>
+        <ul>
+            <li><a href="https://www.nike.com/in/w/jordan-clothing-37eefz6ymx6" target="_blank">
+                    <h5>All Jordan Clothing</h5>
+                </a></li>
+            <li><a href="https://www.nike.com/in/w/tops-tees-jordan-clothing-3n82yz6ymx6z9om13" target="_blank">
+                    <h5>Tops & T-Shirts</h5>
+                </a></li>
+            <li><a href="https://www.nike.com/in/w/jackets-jordan-clothing-3n82yz6ymx6z4e6z" target="_blank">
+                    <h5>Jackets</h5>
+                </a></li>
+            <li><a href="https://www.nike.com/in/w/trousers-jordan-clothing-3n82yz6ymx6z2qg1e" target="_blank">
+                    <h5>Trousers</h5>
+                </a></li>
+            <li><a href="https://www.nike.com/in/w/shorts-jordan-clothing-3n82yz6ymx6z5sj3d" target="_blank">
+                    <h5>Shorts</h5>
+                </a></li>
+            <li><a href="https://www.nike.com/in/w/hoodies-jordan-clothing-3n82yz6ymx6z6tpi6" target="_blank">
+                    <h5>Hoodies</h5>
+                </a></li>
+            <li><a href="https://www.nike.com/in/w/sweatshirts-jordan-clothing-3n82yz6ymx6z6dqhm" target="_blank">
+                    <h5>Sweatshirts</h5>
+                </a></li>
+        </ul>
+    </div>
+
+    <div id="footer3">
+        <h3>Jordan Gear</h3>
+        <ul>
+            <li><a href="https://www.nike.com/in/w/jordan-accessories-equipment-3n82yzawwpw" target="_blank">
+                    <h5>All Jordan Accessories</h5>
+                </a></li>
+            <li><a href="https://www.nike.com/in/w/hats-jordan-accessories-3n82yz6ptczq" target="_blank">
+                    <h5>Hats</h5>
+                </a></li>
+            <li><a href="https://www.nike.com/in/w/socks-jordan-accessories-3n82yz6ymx6z3cmr6" target="_blank">
+                    <h5>Socks</h5>
+                </a></li>
+            <li><a href="https://www.nike.com/in/w/caps-jordan-accessories-3n82yz6ymx6zawvz3" target="_blank">
+                    <h5>Caps</h5>
+                </a></li>
+            <li><a href="https://www.nike.com/in/w/compression-jordan-accessories-3n82yz6ymx6z5a3p0" target="_blank">
+                    <h5>Compression</h5>
+                </a></li>
+            <li><a href="https://www.nike.com/in/w/base-layer-jordan-accessories-3n82yz6ymx6z40t2r" target="_blank">
+                    <h5>Base Layer</h5>
+                </a></li>
+        </ul>
+    </div>
+
+</div>
+
+</div>
+<button id="scrollToTopBtn" title="Go to top">↑</button>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./script.js"></script>
+</body>
+
+</html>
