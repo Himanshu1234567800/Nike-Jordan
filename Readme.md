@@ -55,7 +55,10 @@ All trademarks and product images belong to their respective owners (Nike Inc.).
 
 ---
 
+
+
+
 ## ✍️ Author
 
-**Himanshu Sharma**  
-> [GitHub](https://github.com/yourusername) • [LinkedIn](https://linkedin.com/in/your-profile)
+**Himanshu Vashistha**  
+ • [LinkedIn](http://linkedin.com/in/himanshu-vashistha-8421a0309)
